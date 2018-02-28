@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<h1>Jobs</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Start</th>
+      <th>Photos</th>
+      <th>Historic</th>
+      <th>Commercial</th>
+      <th>Job street1</th>
+      <th>Job street2</th>
+      <th>Job city</th>
+      <th>Job zip</th>
+      <th>Phone</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.type_id %></td>
+        <td><%= job.start_id %></td>
+        <td><%= job.photos %></td>
+        <td><%= job.historic %></td>
+        <td><%= job.commercial %></td>
+        <td><%= job.job_street1 %></td>
+        <td><%= job.job_street2 %></td>
+        <td><%= job.job_city %></td>
+        <td><%= job.job_zip %></td>
+        <td><%= job.phone %></td>
+        <td><%= job.description %></td>
+        <td><%= link_to 'Show', job %></td>
+        <td><%= link_to 'Edit', edit_job_path(job) %></td>
+        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Job', new_job_path %>
+
+</div>

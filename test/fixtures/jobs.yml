@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_id: 1
+  start_id: 1
+  photos: MyString
+  historic: false
+  commercial: false
+  job_street1: MyString
+  job_street2: MyString
+  job_city: MyString
+  job_zip: 1
+  phone: 1
+  description: MyText
+
+two:
+  type_id: 1
+  start_id: 1
+  photos: MyString
+  historic: false
+  commercial: false
+  job_street1: MyString
+  job_street2: MyString
+  job_city: MyString
+  job_zip: 1
+  phone: 1
+  description: MyText

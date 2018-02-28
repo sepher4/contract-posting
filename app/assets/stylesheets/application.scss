@@ -21,6 +21,10 @@
  	position: relative;
  }
 
+.navbar-text {
+	margin-right: 5px; 
+	margin-left: 0px;
+}
 
 .job-photo {
  	height: 300px;
@@ -35,9 +39,18 @@
 .landing {
 	background-color: lightgray;
 	height: 30em;
-	padding-top: 10em;
+	padding-top: 8em;
 	text-align: center;
 }
+
+.centered-text {
+	text-align: center;
+}
+
+.mx-auto {
+	width: 200px;
+}
+
 
  .vertical-center {
   min-height: 100%; 
@@ -51,5 +64,5 @@
 	color: white;
 	text-align: right;
 	height: 10em;
-	padding-top: 5em;
+	padding-top: 6em;
 }

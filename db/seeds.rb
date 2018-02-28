@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+start_list = Start.create ([
+	{time_frame: "Immediately"}, {time_frame: "Within two weeks"}, 
+	{time_frame: "After two weeks"}, {time_frame: "Flexible"},
+	])

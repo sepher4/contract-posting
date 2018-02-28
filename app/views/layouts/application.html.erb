@@ -6,6 +6,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= favicon_link_tag 'favicon.ico' %>
   </head>
 
   <body>
@@ -16,9 +18,29 @@
             <a class="navbar-brand" href="http://localhost:3000/">Contract Posting</a>
           </div>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <% if user_signed_in? %>
+
+              <li class="navbar-text">Welcome, <%= current_user.email %></li>
+              <li><%= link_to edit_user_registration_path do %>
+                <i class="glyphicon glyphicon-cog"></i> Edit Profile
+              <% end %></li>
+              <li><%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="glyphicon glyphicon-off"></i> Sign Out
+              <% end %></li>
+
+            <% else %>  
+
+            <li><%= link_to new_user_registration_path do %>
+                <i class="glyphicon glyphicon-user"></i> Sign Up
+              <% end %></li>
+            <li><%= link_to new_user_session_path do %>
+                <i class="glyphicon glyphicon-log-in"></i> Log In
+              <% end %></li>
+          
+            <% end %>
           </ul>
+
+            
         </div>
       </nav>
       <!-- End Nav bar -->

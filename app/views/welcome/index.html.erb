@@ -2,9 +2,10 @@
 	<div class="container">
 		<h2>Quickly post your job to start getting things done around your home</h2>
 		<h3>Helping connect clients with contractors with less hassle.</h3>
+		<%= link_to "Post a Job", new_job_path, class: "btn btn-default" %>
 	</div>
 </div>
 
 <div class="container-fluid contractor-footer">
-	<p>Are you a contractor?  <a href="#">Sign up</a> here to start viewing jobs.</p>
+	<p>Are you a contractor?  <%= link_to "Sign Up", new_user_registration_path %> here to start viewing jobs.</p>
 </div>

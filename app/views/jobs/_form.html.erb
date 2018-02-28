@@ -1,0 +1,72 @@
+<%= form_with(model: job, local: true) do |form| %>
+  <% if job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type_id %>
+    <%= form.number_field :type_id, id: :job_type_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_id %>
+    <%= form.number_field :start_id, id: :job_start_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photos %>
+    <%= form.file_field :photos, id: :job_photos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :historic %>
+    <%= form.check_box :historic, id: :job_historic %>
+  </div>
+
+  <div class="field">
+    <%= form.label :commercial %>
+    <%= form.check_box :commercial, id: :job_commercial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_street1 %>
+    <%= form.text_field :job_street1, id: :job_job_street1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_street2 %>
+    <%= form.text_field :job_street2, id: :job_job_street2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_city %>
+    <%= form.text_field :job_city, id: :job_job_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_zip %>
+    <%= form.number_field :job_zip, id: :job_job_zip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.number_field :phone, id: :job_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :job_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
