@@ -10,7 +10,7 @@ class CreateJobs < ActiveRecord::Migration[5.1]
       t.string :job_street2
       t.string :job_city
       t.integer :job_zip
-      t.integer :phone
+      t.bigint :phone
       t.text :description
 
       t.timestamps

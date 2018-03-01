@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ContractPosting</title>
+    <title>Contract Posting</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -15,8 +15,11 @@
       <nav class="navbar">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="http://localhost:3000/">Contract Posting</a>
+            <%= link_to "Contract Posting", root_path, class: "navbar-brand" %>
           </div>
+
+          <p id="jobs"><%= link_to "Jobs", jobs_path, class: "navbar-nav navbar-text" %></p>
+
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
 

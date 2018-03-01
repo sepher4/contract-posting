@@ -13,17 +13,12 @@
 
   <div class="field">
     <%= form.label :type_id %>
-    <%= form.number_field :type_id, id: :job_type_id %>
+    <%= form.select :type_id, Type.all.collect { |n| [ n.name, n.id ] } %>
   </div>
 
   <div class="field">
     <%= form.label :start_id %>
-    <%= form.number_field :start_id, id: :job_start_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :photos %>
-    <%= form.file_field :photos, id: :job_photos %>
+    <%= form.select :start_id, Start.all.collect { |p| [ p.time_frame, p.id ] } %>
   </div>
 
   <div class="field">
@@ -62,9 +57,15 @@
   </div>
 
   <div class="field">
+    <%= form.label :photos %>
+    <%= form.file_field :photos, id: :job_photos %>
+  </div>
+
+  <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description, id: :job_description %>
   </div>
+
 
   <div class="actions">
     <%= form.submit %>

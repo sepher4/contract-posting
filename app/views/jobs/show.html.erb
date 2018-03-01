@@ -1,59 +1,50 @@
+<div class="container well">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Type:</strong>
-  <%= @job.type_id %>
-</p>
+<div class="card">
+  <% if @job.photos.url %>
+  <%= image_tag @job.photos.url, class: "card-img-top" %>
+  <% else %>
+  <div id="filler-image"></div>
+  <% end %>
+  <div class="card-block">
+    <h4 class="card-title"><%= @job.type.name %></h4>
+    <p class="card-text">
+      <strong>Time Frame: </strong><%= @job.start.time_frame %>
+    </p>
+    <p class="card-text">
+      <strong>Historic Property?:</strong>
+      <% if @job.historic == true %> 
+            <td>Yes</td>
+          <% else %>
+          <td> No </td>
+          <% end %>
+    </p>
+    <p class="card-text">
+    <% if @job.commercial == true %>
+      <strong>Residence Type:</strong> 
+            <td>Commercial</td>
+          <% else %>
+          <td>Home</td>
+          <% end %>
+    </p>
+    <p class="card-text">
+      <strong>Address:</strong>
+      <%= @job.job_street1 %>
+      <%= @job.job_street2 %>,
+      <br>
+      <%= @job.job_city %>, TX
+      <%= @job.job_zip %>
+    </p>
+    <p class="card-text">
+      <strong>Phone:</strong> <%= @job.phone %>
+    </p>
+    <p class="card-text">
+      <strong>Description:</strong> <%= @job.description %>
+    </p>
+  <%= link_to 'Edit', edit_job_path(@job), class: "btn btn-default btn-sm" %>
+  <%= link_to 'Back', jobs_path, class: "btn btn-default btn-sm" %>
+ </div>
+</div>
 
-<p>
-  <strong>Start:</strong>
-  <%= @job.start_id %>
-</p>
-
-<p>
-  <strong>Photos:</strong>
-  <%= @job.photos %>
-</p>
-
-<p>
-  <strong>Historic:</strong>
-  <%= @job.historic %>
-</p>
-
-<p>
-  <strong>Commercial:</strong>
-  <%= @job.commercial %>
-</p>
-
-<p>
-  <strong>Job street1:</strong>
-  <%= @job.job_street1 %>
-</p>
-
-<p>
-  <strong>Job street2:</strong>
-  <%= @job.job_street2 %>
-</p>
-
-<p>
-  <strong>Job city:</strong>
-  <%= @job.job_city %>
-</p>
-
-<p>
-  <strong>Job zip:</strong>
-  <%= @job.job_zip %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @job.phone %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @job.description %>
-</p>
-
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+</div>
