@@ -17,5 +17,18 @@ start_list = Start.create ([
 
 type_list = Type.create ([
 	{name: "Additions & Remodels"}, {name: "Air Conditioning & Cooling"},
-	{name: "Bathroom"}, {name: "Builders (New Homes), Architects & Designers"}
-	])	
+	{name: "Bathroom"}, {name: "Builders (New Homes), Architects & Designers"},
+	{name: "Cabinets & Countertops"}, {name: "Carpentry"}, {name: "Carpet"},
+	{name: "Cleaning Services"}, {name: "Concrete, Brick & Stone"}, 
+	{name: "Decks, Porches, Gazebos & Play Equipment"}, 
+	{name: "Decorators & Designers"}, 
+	{name: "Driveways, Patios, Walks, Steps & Floors"}, 
+	{name: "Drywall & Insulation"}, {name: "Electrical, Telephone & Computers"},
+	{name: "Fences"}, {name: "Flooring"}, {name: "Foundations"},
+	{name: "Garages, Doors, Openers"}, {name: "Gutters"}, 
+	{name: "Handyman Services"}, {name: "Heating & Cooling"}, {name: "Kitchen"},
+	{name: "Landscape, Decks & Fences"}, 
+	{name: "Maintenance of Lawn, Trees & Shrubs"}, {name: "Painting & Staining"},
+	{name: "Plumbing"}, {name: "Roofing, Siding & Gutters"}, {name: "Siding"},
+	{name: "Swimming Pools, Spas, Hot Tubs & Saunas"}, {name: "Tile & Stone"},
+	{name: "Walls & Ceilings"}, {name: "Windows & Doors"}])	
