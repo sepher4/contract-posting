@@ -42,8 +42,9 @@
     <p class="card-text">
       <strong>Description:</strong> <%= @job.description %>
     </p>
+  <%= link_to 'Done', jobs_path, class: "btn btn-default btn-sm" %>
   <%= link_to 'Edit', edit_job_path(@job), class: "btn btn-default btn-sm" %>
-  <%= link_to 'Back', jobs_path, class: "btn btn-default btn-sm" %>
+  <%= link_to "Post another Job", new_job_path, class: "btn btn-default btn-sm" %>
  </div>
 </div>
 
